@@ -5,7 +5,11 @@
   "main": "index.js",
   "author": "Pedro Chamberlain",
   "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
   "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.56",
     "typescript": "^3.9.7"
   }
 }
