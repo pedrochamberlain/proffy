@@ -1,0 +1,8 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Back-end to Proffy website",
+  "main": "index.js",
+  "author": "Pedro Chamberlain",
+  "license": "MIT"
+}
