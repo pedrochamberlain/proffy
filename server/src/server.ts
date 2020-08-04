@@ -13,15 +13,8 @@ app.use(express.json())
 // Route Parameters: Identificar qual recurso eu quero atualizar ou deletar (Ex.: '/users/:id')
 // Query Parameters: Páginação, filtros, ordenação (Ex.: users?page=2&sort=name)
 
-app.post('/users', (req, res) => {
-    console.log(req.body)
-
-    const users = [
-        { name: 'Pedro', age: 21 },
-        { name: 'Giulio', age: 22 }
-    ]
-
-    return res.send(users)
+app.get('/', (req, res) => {
+    return res.json({ message: "Hello World" })
 })
 
 app.listen(1234)
