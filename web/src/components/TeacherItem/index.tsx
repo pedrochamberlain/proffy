@@ -2,34 +2,54 @@ import React from 'react'
 
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 
+import api from '../../services/api'
+
 import './styles.css'
 
-function TeacherItem () {
+export interface Teacher {
+    id: number;
+    avatar: string;
+    bio: string;
+    cost: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+}
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+    function createConnection() {
+        api.post('connections', { 
+            user_id: teacher.id
+        })
+    }
+
     return (
         <article className="teacher-item">
                     <header>
-                        <img src="https://avatars2.githubusercontent.com/u/40682476?s=460&u=57f3d6e5f24b52f74bf95ee4c0e9aafab0f25358&v=4" alt="Davi Freitas"/>
+                        <img src={teacher.avatar} alt={teacher.name}/>
                         <div>
-                            <strong>Pedro Chamberlain</strong>
-                            <span>Cinema</span>
+                            <strong>{teacher.name}</strong>
+                            <span>{teacher.subject}</span>
                         </div>
                     </header>
 
-                    <p>
-                        Entusiasta de Cinema.
-                        <br /><br />
-                        Apaixonado por Godard, Jean-Marie Straub, Danièle Huillet, Pedro Costa e Cassavetes.
-                    </p>
+                    <p>{teacher.bio}</p>
 
                     <footer>
                         <p>
                             Preço/hora
-                            <strong>R$ 50,00</strong>
+                            <strong>R$ {teacher.cost}</strong>
                         </p>
-                        <button type="button">
+                        <a 
+                            target="_blank"
+                            onClick={createConnection} 
+                            href={`https://wa.me/${teacher.whatsapp}`}>
                             <img src={whatsappIcon} alt="Whatsapp"/>
                             Entrar em contato
-                        </button>
+                        </a>
 
                     </footer>
                 </article>
