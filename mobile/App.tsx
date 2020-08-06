@@ -22,7 +22,7 @@ export default function App() {
       // <> == <View> | Fragment
       <> 
         <Landing />
-        <StatusBar style="auto" />
+        <StatusBar style="light" />
       </>
   )
 }
