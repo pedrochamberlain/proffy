@@ -5,7 +5,7 @@
 
 
 <p align="center">	
-    <img src="https://raw.githubusercontent.com/pedrochamberlain/proffy/95f6d1a234188bd4e153b7a4c259d1457e5a1585/web/src/assets/images/landing.svg?token=AJWMH3DJ6SLYGZSFLZILR527FNUZC" alt="Proffy" width="500"/>
+    <img src="https://raw.githubusercontent.com/pedrochamberlain/proffy/f3748f7b35b10f348b633e680a4ff8d43f6f8a2e/web/src/assets/images/landing.svg" alt="Proffy" width="500"/>
 </p>
 
 <p align="center">
