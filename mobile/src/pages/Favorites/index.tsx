@@ -18,9 +18,13 @@ function Favorites() {
                     paddingBottom: 16
                 }}
             >
-                <TeacherItem />
-                <TeacherItem />
-                <TeacherItem />
+                {teachers.map((teacher: Teacher) => {
+                    return <TeacherItem
+                        key={teacher.id}
+                        teacher={teacher}
+                        favorited={favorites.includes(teacher.id) ? true : false}
+                    />
+                })}
             </ScrollView>
         </View>
     )
