@@ -81,14 +81,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginRight: 8
     },
+    favorited: {
+        backgroundColor: '#e33d3d'
+    },
     contactButtonText: {
         color: '#FFF',
         fontFamily: 'Archivo_700Bold',
         fontSize: 16,
         marginLeft: 16
     }
-
-
 })
 
 export default styles
